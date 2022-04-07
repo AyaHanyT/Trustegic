@@ -11,7 +11,7 @@
   });
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
-  var scrolltoOffset = $('header').outerHeight() - 21;
+  var scrolltoOffset = $('#header').outerHeight() - 21;
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function (e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -43,15 +43,17 @@
     }
   });
 
+
+  
   // Activate smooth scroll on page load with hash links in the url
-  $(document).ready(function () {
+  $(document).ready(function() {
     if (window.location.hash) {
       var initial_nav = window.location.hash;
       if ($(initial_nav).length) {
         var scrollto = $(initial_nav).offset().top - scrolltoOffset;
         $('html, body').animate({
           scrollTop: scrollto
-        }, 100, 'easeInOutExpo');
+        }, 1500, 'easeInOutExpo');
       }
     }
   });
@@ -95,10 +97,10 @@
   var nav_sections = $('section');
   var main_nav = $('.nav-menu, .mobile-nav');
 
-  $(window).on('scroll', function () {
+  $(window).on('scroll', function() {
     var cur_pos = $(this).scrollTop() + 200;
 
-    nav_sections.each(function () {
+    nav_sections.each(function() {
       var top = $(this).offset().top,
         bottom = top + $(this).outerHeight();
 
@@ -108,9 +110,12 @@
         }
         main_nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('active');
       }
-
+      if (cur_pos < 300) {
+        $(".nav-menu ul:first li:first, .mobile-menu ul:first li:first").addClass('active');
+      }
     });
   });
+
 
   // Toggle .header-scrolled class to #header when page is scrolled
   $(window).scroll(function () {
@@ -153,6 +158,12 @@ function aos_init() {
   });
 }
 
+AOS.init({
+  disable: function() {
+    var maxWidth = 500;
+    return window.innerWidth < maxWidth;
+  }
+});
 
 function get_action(form) {
   var v = grecaptcha.getResponse();
@@ -165,5 +176,54 @@ function get_action(form) {
     return true;
   }
 }
+
+$('.clients-carousel').owlCarousel({
+  loop:true,
+  margin:10,
+  autoplay:true,
+  nav:false,
+  autoplayTimeout:3000,
+  autoplayHoverPause:true,
+  responsiveClass:true,
+  responsive:{
+      0:{
+          items:1,
+      },
+      300:{
+        items:2,
+    },
+    575:{
+      items:3,
+  },
+      768:{
+          items:4,
+      }
+  }
+})
+
+
+$('.team-carousel').owlCarousel({
+  loop:true,
+  margin:0,
+  autoplay:true,
+  nav:false,
+  autoplayTimeout:2500,
+  autoplayHoverPause:true,
+  responsiveClass:true,
+  responsive:{
+      0:{
+          items:1,
+      },
+      400:{
+        items:2,
+    }, 
+    768:{
+      items:3,
+  },
+      992:{
+          items:4,
+      }
+  }
+})
 
 }) (jQuery);
