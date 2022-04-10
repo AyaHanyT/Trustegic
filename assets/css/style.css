@@ -68,9 +68,11 @@ section {
   color: black;
   font-weight: 700;
 }
-.page{
+
+.page {
   margin-top: 50px;
 }
+
 /*---- Preloader --------*/
 #preloader {
   position: fixed;
@@ -148,41 +150,52 @@ header.header-scrolled {
   width: 100%;
   padding: 0 50px;
 }
+
 header .logo img {
   padding: 0;
   margin: 10px 0;
   max-width: 130px;
 }
+
 #header {
   border-bottom: 2px solid #ffffff2f;
 }
 
-header.invert{
+header.invert {
   background: white;
 }
+
 header.invert .primary-btn {
   color: white;
   background-color: black;
 }
+
 header.invert .primary-btn:hover {
   color: black;
   background-color: white;
 }
+
 header.invert .logo img {
   -webkit-filter: invert(92%);
   filter: invert(92%);
 }
+
 header.invert #header {
   border-bottom: 2px solid #00000021;
 }
-header.invert .nav-menu a:hover, header.invert .nav-menu .active>a, header.invert .nav-menu li:hover>a {
+
+header.invert .nav-menu a:hover,
+header.invert .nav-menu .active>a,
+header.invert .nav-menu li:hover>a {
   color: black;
   border-bottom: 2px solid black;
 }
+
 header.invert .mobile-nav-toggle i {
   color: black;
 }
-header.invert .mobile-nav-toggle i.fa-times{
+
+header.invert .mobile-nav-toggle i.fa-times {
   color: white;
 }
 
@@ -351,8 +364,9 @@ header.invert .mobile-nav-toggle i.fa-times{
   color: black;
   text-transform: uppercase;
 }
-.mobile-nav a.primary-btn:hover{
-  background-color: black ;
+
+.mobile-nav a.primary-btn:hover {
+  background-color: black;
   color: white;
 }
 
@@ -1014,7 +1028,7 @@ footer .copyright {
 
 
 /****** contact us page *******/
-.contact .container-fluid{
+.contact .container-fluid {
   width: calc(100% - 100px);
 }
 
@@ -1135,7 +1149,7 @@ footer .copyright {
 
 
 @media (max-width: 1024px) {
-  #hero{
+  #hero {
     padding: 90px 0 0 0;
   }
 
@@ -1235,9 +1249,11 @@ footer .copyright {
     width: 235px;
     height: 235px;
   }
+
   #hero.hero-services {
     padding-top: 80px;
   }
+
   .hero-services .heading p {
     width: 75%;
   }
@@ -1248,9 +1264,12 @@ footer .copyright {
   header.header-scrolled {
     padding: 0 15px;
   }
-  .heading p , .hero-services .heading p{
+
+  .heading p,
+  .hero-services .heading p {
     width: 92%;
   }
+
   .mobile-nav-toggle {
     right: 16px;
   }
@@ -1297,148 +1316,165 @@ footer .copyright {
   .message .bg {
     width: 200px;
     height: 200px;
-
   }
 
-  @media (max-width: 600px) {
-    .about {
-      margin: 0 2rem;
-    }
+  .contact .container-fluid {
+    width: calc(100% - 30px);
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    margin: 0 2rem;
+  }
+}
+
+@media (max-width:575px) {
+  .heading h2 {
+    font-size: 30px;
   }
 
-  @media (max-width:575px) {
-    .heading h2 {
-      font-size: 30px;
-    }
-    .heading p, .hero-services .heading p {
-      width: 89%;
-  }  
-    .center-p {
-      width: 93%;
-    }
-
-    .services img {
-      width: 230px;
-      margin-bottom: 1.5rem;
-      height: 230px;
-    }
-
-    .owl-carousel.team-carousel .owl-item img {
-      height: 150px;
-      width: 150px;
-    }
-
-    footer .footer-links {
-      align-content: flex-start;
-      margin-top: 1rem;
-    }
-
-    .footer-info,
-    .footer-links {
-      padding: 0 1.5rem;
-    }
-
-    .about-page {
-      height: fit-content;
-      margin: 2rem auto;
-      padding: 1rem 1rem 1rem 0;
-    }
-
-    .about-page .col-md-4 {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center
-    }
-
-    .about-page img {
-      width: 120px;
-      position: relative;
-    }
-
-    .vision .bg,
-    .mission .bg,
-    .message .bg {
-      margin: auto;
-    }
+  .heading p,
+  .hero-services .heading p {
+    width: 89%;
   }
 
-  @media (max-width: 400px) {
-    header .logo img {
-      max-width: 100px;
-    }
-
-    .hero-services {
-      padding-top: 170px;
-    }
-
-    .heading p , .hero-services .heading p{
-      width: 98%;
-    }
-    #hero {
-      padding: 60px 0 0 0;
-    }
-
-    header.header-scrolled {
-      height: 60px;
-    }
-
-    .about {
-      margin: 0 1rem;
-    }
-
-    section {
-      padding: 60px 0;
-    }
-
-    .buttons {
-      gap:  10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  .center-p {
+    width: 93%;
   }
 
-    .heading h2 {
-      font-size: 26px;
-      line-height: 35px;
-    }
-
-    .mobile-nav a {
-      padding: 8px 20px;
-    }
-
-    .mobile-nav a.primary-btn {
-      padding: 6px 10px;
-    }
-
-    .blackbrder-btn,
-    .whitebrder-btn,
-    .secondary-btn {
-      padding: 3px 8px;
-    }
-
-    .primary-btn {
-      padding: 5px 10px;
-    }
-
-    .team-box {
-      margin-top: 30%;
-      padding-bottom: 8%;
-    }
-
-    .owl-carousel.team-carousel .owl-item img {
-      height: 190px;
-      width: 190px;
-      margin-top: -30%;
-    }
-
-    .consultation {
-      width: 94%;
-    }
-
+  .services img {
+    width: 230px;
+    margin-bottom: 1.5rem;
+    height: 230px;
   }
 
-  @media (max-width: 300px) {
-    .about {
-      margin: 0 1%;
-    }
+  .owl-carousel.team-carousel .owl-item img {
+    height: 150px;
+    width: 150px;
   }
+
+  footer .footer-links {
+    align-content: flex-start;
+    margin-top: 1rem;
+  }
+
+  .footer-info,
+  .footer-links {
+    padding: 0 1.5rem;
+  }
+
+  .about-page {
+    height: fit-content;
+    margin: 2rem auto;
+    padding: 1rem 1rem 1rem 0;
+  }
+
+  .about-page .col-md-4 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center
+  }
+
+  .about-page img {
+    width: 120px;
+    position: relative;
+  }
+
+  .vision .bg,
+  .mission .bg,
+  .message .bg {
+    margin: auto;
+  }
+
+  .contact .container-fluid {
+    width: calc(100% - 14px);
+  }
+}
+
+@media (max-width: 400px) {
+  header .logo img {
+    max-width: 100px;
+  }
+
+  .hero-services {
+    padding-top: 170px;
+  }
+
+  .heading p,
+  .hero-services .heading p {
+    width: 98%;
+  }
+
+  #hero {
+    padding: 60px 0 0 0;
+  }
+
+  header.header-scrolled {
+    height: 60px;
+  }
+
+  .about {
+    margin: 0 1rem;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .buttons {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heading h2 {
+    font-size: 26px;
+    line-height: 35px;
+  }
+
+  .mobile-nav a {
+    padding: 8px 20px;
+  }
+
+  .mobile-nav a.primary-btn {
+    padding: 6px 10px;
+  }
+
+  .blackbrder-btn,
+  .whitebrder-btn,
+  .secondary-btn {
+    padding: 3px 8px;
+  }
+
+  .primary-btn {
+    padding: 5px 10px;
+  }
+
+  .team-box {
+    margin-top: 30%;
+    padding-bottom: 8%;
+  }
+
+  .owl-carousel.team-carousel .owl-item img {
+    height: 190px;
+    width: 190px;
+    margin-top: -30%;
+  }
+
+  .consultation {
+    width: 94%;
+  }
+  .contact .container-fluid {
+    width: calc(100% - 5px);
+}
+
+
+}
+
+@media (max-width: 300px) {
+  .about {
+    margin: 0 1%;
+  }
+}
